@@ -30,5 +30,4 @@ class TalkSession extends Model
     {
         return $this->belongsTo(Table::class);
     }
-
 }

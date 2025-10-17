@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(TalkSession::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(TalkSession::class)->constrained('talk_sessions')->cascadeOnDelete();
             $table->text('content');
             $table->string('speaker');
             $table->integer('review');
