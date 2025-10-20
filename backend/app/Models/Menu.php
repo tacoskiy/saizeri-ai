@@ -9,6 +9,7 @@ class Menu extends Model
     //
     protected $fillable = [
         'name',
+        'number',
         'price',
         'image_path',
         'description',

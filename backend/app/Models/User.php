@@ -18,8 +18,10 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
+        'table_id',
         'name',
-        'number',
+        'role',
+        'email',
         'password',
     ];
 
@@ -45,4 +47,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function table()
+    {
+        return $this->belongsTo(Table::class);
+    }
+
 }
