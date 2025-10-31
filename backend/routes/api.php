@@ -19,7 +19,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/', [MessageController::class, 'store']);
     });
     Route::prefix('menu')->group(function () {
-        Route::get('/{menuId}', [MenuController::class, 'index']);
-        Route::post('/', [MenuController::class, 'update']);
+        Route::get('/', [MenuController::class, 'index']);
+        Route::get('/search', [MenuController::class, 'search']);
+        Route::post('/update/{menuId}', [MenuController::class, 'update']);
     });
 });
