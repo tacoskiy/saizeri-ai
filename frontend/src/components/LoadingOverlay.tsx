@@ -17,8 +17,7 @@ export const LoadingOverlay = () => {
       <div className="flex flex-col items-center justify-center">
         <p className="text-5xl font-bold mb-20">Loading...</p>
 
-        {/* ピザアニメーション */}
-        <div className="relative w-[280px] h-[280px] animate-spin-slow flex items-center justify-center">
+        <div className="relative w-[280px] h-[280px] animate-spin-slow flex items-center justify-center rotate-clockwise">
           {slices.map((deg, index) => (
             <div
               key={index}
@@ -26,7 +25,7 @@ export const LoadingOverlay = () => {
               style={{
                 transform: `
                   rotate(${deg}deg)
-                  translateY(-80px)
+                  translateY(-82px)
                 `,
                 transformOrigin: "center center",
               }}

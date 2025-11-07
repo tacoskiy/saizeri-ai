@@ -21,4 +21,20 @@
 }
 
 
+/* ローディング用のアニメーションしてます */
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-clockwise {
+  animation: rotateClockwise 10s linear infinite; 
+  transform-origin: center; 
+}
+
+
 
