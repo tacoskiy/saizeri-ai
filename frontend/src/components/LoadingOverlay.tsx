@@ -17,11 +17,11 @@ export const LoadingOverlay = () => {
       <div className="flex flex-col items-center justify-center">
         <p className="text-5xl font-bold mb-20">Loading...</p>
 
-        <div className="relative w-[280px] h-[280px] animate-spin-slow flex items-center justify-center rotate-clockwise">
+        <div className="relative w-[280px] h-[280px]  flex items-center justify-center rotate-clockwise">
           {slices.map((deg, index) => (
             <div
               key={index}
-              className="absolute"
+              className="absolute "
               style={{
                 transform: `
                   rotate(${deg}deg)
