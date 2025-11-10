@@ -10,7 +10,7 @@ export function OnboardContainer (){
             
             <button className="flex items-center justify-center 
             w-[432px] h-[77px] p-6 gap-6 bg-green rounded-full 
-            [box-shadow:0_0_36px_0_#44C55C_inset,0_12px_48px_0_rgba(49,160,70,0.48)]">
+            [box-shadow:0_0_36px_0_#44C55C_inset,0_12px_48px_0_rgba(49,160,70,0.48)] hover:scale-95 duration-500">
                 <Image
                     src='MikeIcon.svg'
                     alt="マイクアイコン"
