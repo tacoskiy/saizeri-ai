@@ -33,7 +33,9 @@ const Menu =[
 export function ResultsBox() {
     return (
         <div className="flex flex-col items-center justify-start gap-5 p-3">
-            <p className="text-3xl font-bold text-green">AIからの提案</p>
+            <button>
+                <p className="text-3xl font-bold text-green">AIからの提案</p>
+            </button>
             {Menu.map((Menu, index) => (
                 <div key={index} className="flex justify-start w-[452px] h-45 bg-linear-to-r from-[#ffffff33] to-[#3435411A] border-2 border-green rounded-3xl p-4 gap-4 shadow-xl shadow-green/20">
                     <Image
