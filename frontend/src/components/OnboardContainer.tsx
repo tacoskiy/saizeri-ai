@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export function OnboardContainer (){
+type OnboardContainerProps = {
+  inputValue: string;
+  setInputValue: React.Dispatch<React.SetStateAction<string>>;
+};
+
+
+export function OnboardContainer ({ inputValue, setInputValue }: OnboardContainerProps){
     return (
         <div className="flex flex-col items-center justify-center gap-16">
             <p className="font-bold text-4xl text-green">
@@ -20,7 +26,10 @@ export function OnboardContainer (){
                 <p className="text-white text-2xl font-bold">話しかけてみる</p>
             </button>
 
-            <input  type="text"  
+            <input  
+                type="text"  
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
                 placeholder="または、テキストで入力"
                 className="flex items-center w-[432px] h-[51px] bg-[#F4F2F1] rounded-xl 
                 font-medium text-sm px-6"
