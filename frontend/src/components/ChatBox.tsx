@@ -9,9 +9,14 @@ type Message = {
   sender: "user" | "ai";
 };
 
-export function ChatBox() {
+type ChatBoxProps = {
+  input: string;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
+};
+
+
+export function ChatBox({ input, setInput }: ChatBoxProps) {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

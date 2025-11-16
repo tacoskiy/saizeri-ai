@@ -4,9 +4,12 @@ import { Header } from "@/components/Header";
 import { OnboardContainer } from "@/components/OnboardContainer";
 import { useEffect } from "react";
 import { useLoading } from "../context/LoadingContext";
+import { useState } from "react";
 
 export default function Home() {
     const {open, close} = useLoading();
+
+    const [inputValue, setInputValue] = useState("");
 
     useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +24,7 @@ export default function Home() {
         <div className="flex flex-col gap-36
         GeneralPurposeBg min-h-screen ">
             <Header/>
-            <OnboardContainer />
+            <OnboardContainer inputValue={inputValue} setInputValue={setInputValue}/>
         </div>
     )
 }
