@@ -3,6 +3,7 @@ import Image from "next/image";
 type MenuProps = {
     name: string
     price: string
+    price2: string
     image: string
 }
 // 仮で入れてます
