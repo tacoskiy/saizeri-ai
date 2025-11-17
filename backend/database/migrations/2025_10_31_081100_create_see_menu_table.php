@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('menu_id')->constrained('menus')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->primary(['menu_id', 'user_id']);
+            $table->timestamps();
         });
     }
 

@@ -26,4 +26,8 @@ class Menu extends Model
     {
         return $this->belongsToMany(Allergen::class);
     }
+    public function seeMenu()
+    {
+        return $this->belongsTo(Message::class);
+    }
 }

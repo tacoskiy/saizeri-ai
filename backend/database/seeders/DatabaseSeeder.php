@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(TabletAccountSeeder::class);
         $this->call(SaizeriyaMenusSeeder::class);
     }
 }

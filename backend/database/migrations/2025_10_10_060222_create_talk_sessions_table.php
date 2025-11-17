@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('talk_sessions', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->uuid('id')->primary();
             $table->foreignId('table_id')->index()->constrained('tables')->cascadeOnDelete();
             $table->ipAddress('ip_address');
             $table->string('user_agent');
