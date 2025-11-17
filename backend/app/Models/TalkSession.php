@@ -14,6 +14,7 @@ class TalkSession extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
+        'id',
         'table_id',
         'ip_address',
         'user_agent',

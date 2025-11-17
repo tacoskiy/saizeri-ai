@@ -15,7 +15,8 @@ Route::middleware('auth:sanctum')->group(function () {
         'success' => true,
     ]));
     Route::prefix('message')->group(function () {
-        Route::get('/logs', [MessageController::class, 'index']);
+        Route::post('/start', [MessageController::class, 'start']);
+        Route::get('/logs', [MessageController::class, 'logs']);
         Route::post('/', [MessageController::class, 'store']);
     });
     Route::prefix('menu')->group(function () {

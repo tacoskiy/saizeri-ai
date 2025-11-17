@@ -28,6 +28,14 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'gemini' => [
+        'api_key' => env('GEMINI_API_KEY'),
+        'model' => env('GEMINI_MODEL', 'gemini-2.5-flash'),
+        'temperature' => env('GEMINI_TEMPERATURE', 0.8),
+        'max_tokens' => env('GEMINI_MAX_TOKENS', 2048),
+        'system_instruction' => env('GEMINI_SYSTEM_INSTRUCTION', 'You are a helpful AI assistant.'),
+    ],
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),

@@ -13,4 +13,8 @@ class Message extends Model
         'speaker',
         'review',
     ];
+    public function seeMenu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
 }
